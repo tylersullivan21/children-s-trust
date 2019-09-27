@@ -10,11 +10,13 @@
 .navbar{
     grid-area: navbar;
     display: grid;
+    justify-content: center;
     grid-template-areas: 
     "nav-container";
 }
 .nav-container{
     grid-area: nav-container;
+    list-style: none;
     display: grid;
     grid-template-columns: 200px 2fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "nav-logo . home minutes documents involved contact"
@@ -28,6 +30,7 @@
 }
 .nav-logo img{
     width: 100%;
+    display: block;
 }
 
 #home{
@@ -54,27 +57,35 @@
     grid-area: footer;
     background-color: #2A578D;
     display: grid;
-    max-width: 900px;
-justify-self: center;
-align-self: center;
+    max-width: 1100px;
+    justify-content: center;
+    align-self: center;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
-    grid-template-areas:
-    "footer-logo contact-info contact-block";
+    grid-template-areas: "footer-logo contact-info contact-block";
+}
+.footer-wrapper{
+    display: flex;
+justify-content: center;
+background: #2A578D;
 }
 
 .footer-logo{
     justify-self: center;
     align-self: center;
+    padding: 15px;
 }
 .footer-contact-info{
     justify-self: center;
     align-self: center;
+    color: white;
 }
 .contact-block{
     justify-self: center;
     align-self: center;
+    color: white;
 }
 .footer-logo img{
     width: 100%;
+    display: block;
 } 
