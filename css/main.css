@@ -1,3 +1,8 @@
+body{ 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
 .grid-container{
     display: grid;
     grid-template-rows: 100px 1000px auto;
@@ -110,3 +115,23 @@ background: #2A578D;
     width: 100%;
     display: block;
 } 
+
+@media only screen and (max-width: 667px) {
+    .footer{
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 200px repeat(2,1fr);
+    grid-template-areas: 
+    "footer-logo"
+    "contact-info"
+    "contact-block";
+    }
+
+    .footer-logo img{
+        max-width: 320px;
+        width: 100%;
+        display: block;
+    } 
+  }
