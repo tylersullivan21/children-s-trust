@@ -1,6 +1,6 @@
 .grid-container{
     display: grid;
-    grid-template-rows: 200px auto auto;
+    grid-template-rows: 100px auto auto;
     grid-template-areas:
     "navbar"
     "main-content"
@@ -26,6 +26,9 @@
     list-style: none;
     
     justify-self: center;
+    align-self: center;
+}
+.nav-logo{
     align-self: center;
 }
 .nav-logo img{
