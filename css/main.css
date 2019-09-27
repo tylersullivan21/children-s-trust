@@ -1,6 +1,6 @@
 .grid-container{
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 200px auto auto;
     grid-template-areas:
     "navbar"
     "main-content"
@@ -15,20 +15,66 @@
 }
 .nav-container{
     grid-area: nav-container;
-    display: flex;
-justify-content: space-between;
-align-items: center;
-min-height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav-logo . home minutes documents involved contact"
 }
+
+.nav-item{
+    list-style: none;
+    
+    justify-self: center;
+    align-self: center;
+}
+.nav-logo img{
+    width: 100%;
+}
+
+#home{
+    grid-area: home;
+}
+#minutes{
+    grid-area: minutes;
+}
+#documents{
+    grid-area: documents;
+}
+#involved{
+    grid-area: involved;
+}
+#contact{
+    grid-area: contact;
+}
+
 
 .main-content{
     grid-area: main-content;
 }
 .footer{
     grid-area: footer;
+    background-color: #2A578D;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+justify-self: center;
+align-self: center;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
     grid-template-areas:
     "footer-logo contact-info contact-block";
 }
+
+.footer-logo{
+    justify-self: center;
+    align-self: center;
+}
+.footer-contact-info{
+    justify-self: center;
+    align-self: center;
+}
+.contact-block{
+    justify-self: center;
+    align-self: center;
+}
+.footer-logo img{
+    width: 100%;
+} 
