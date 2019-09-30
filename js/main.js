@@ -44,3 +44,9 @@ function closeModal() {
 /*$('#closeModalBtn').on('click', closeModal);*/
 
 closeModalBtn.onclick = closeModal;
+
+
+
+$('.carousel').carousel({
+  interval: 2000,
+})
