@@ -33,6 +33,7 @@ body{
     padding: 5px;
     justify-self: center;
     align-self: center;
+    white-space: nowrap;
 }
 .nav-logo{
     align-self: center;
@@ -126,7 +127,7 @@ grid-row: 2/3;
 grid-template-rows: repeat(6,1fr);
 }
 #closeModalBtn{
-    color: white;
+    color: magenta;
     justify-self: end;
     align-self: center;
 }
@@ -136,7 +137,7 @@ grid-template-rows: repeat(6,1fr);
     width: 25px;
     margin-bottom: 5px;
     height: 4px;
-    background-color: #fff;
+    background-color: magenta;
     border-radius: 1px;
     transition: all 0.3s ease-in-out;
 }
@@ -209,6 +210,35 @@ background: #2A578D;
     display: block;
 } 
 
+
+@media only screen and (max-width:912px){
+.nav-item{
+    display: none;
+}
+.hamburger-menu {
+    color: magenta;  
+    display: block;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+}
+.navbar{
+    grid-area: navbar;
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: 
+    "nav-container";
+}
+
+.nav-container{
+    max-width: 1100px;
+    grid-area: nav-container;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 250px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav-logo . home minutes documents involved contact"
+}
+}
 @media only screen and (max-width: 667px) {
     .footer{
     justify-content: center;
