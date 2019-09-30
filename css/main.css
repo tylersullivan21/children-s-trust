@@ -34,7 +34,7 @@ body{
     justify-self: center;
     align-self: center;
     white-space: nowrap;
-    margin: 8px;
+    margin: 8px
 }
 .nav-logo{
     align-self: center;
@@ -113,7 +113,7 @@ body{
     top: 0;
     left:0;
     z-index:1;
-    width: 100%;
+    width: 80%;
     height: 100%;
     animation-name: myModal;
     animation-duration: .5s;
@@ -125,12 +125,21 @@ display:grid;
 justify-items: left;
 font-size: 35px;
 grid-row: 2/3;
-grid-template-rows: repeat(6,1fr);
+grid-template-rows: repeat(5,1fr);
 }
+
+#modal .nav-logo{
+max-width: 250px;
+}
+#modal .nav-logo img{
+    width: 100%;
+}
+
+
 #closeModalBtn{
     color: magenta;
-    justify-self: end;
-    align-self: center;
+    background:#FFFFFF;
+    width:100%;
 }
  .bar {
     display: block;
@@ -149,6 +158,10 @@ grid-template-rows: repeat(6,1fr);
 #closeModalBtn{
     justify-self: end;
 }
+.on{
+    grid-column: 3/4;
+    align-self: center;
+}
 .on .one {
     transform: rotate(45deg) translate(6px, 6px);
 }
@@ -161,13 +174,6 @@ grid-template-rows: repeat(6,1fr);
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-.modal-children{
-    display:grid;
-    justify-items: left;
-    font-size: 35px;
-    grid-row: 2/3;
-    grid-template-rows: repeat(6,1fr);
-    }
 /*HAMBURGER ENDS HERE */
 
 

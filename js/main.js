@@ -8,7 +8,13 @@ var modal = document.getElementById('modal');
 /* 2. Defining a function named openModal, to write instructions that should run on clicking the element toggle */
 function openModal() {
   
-  modal.style.display = "grid";
+  if(modal.style.display === "grid"){
+      modal.style.display = "none";
+  }
+  else{
+      modal.style.display = "grid";
+  }
+  
 }
 
 /* 3. Attach the function to the element toggles on click event */
@@ -29,6 +35,7 @@ var closeModalBtn = document.getElementById('closeModalBtn');
 function closeModal() {
 
   modal.style.display = "none";
+  toggle.style.display = "grid";
 }
 
 /* 3. Attach the function to the element closeModalBtn on click event */
