@@ -34,6 +34,7 @@ body{
     justify-self: center;
     align-self: center;
     white-space: nowrap;
+    margin: 8px;
 }
 .nav-logo{
     align-self: center;
@@ -160,6 +161,13 @@ grid-template-rows: repeat(6,1fr);
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
+.modal-children{
+    display:grid;
+    justify-items: left;
+    font-size: 35px;
+    grid-row: 2/3;
+    grid-template-rows: repeat(6,1fr);
+    }
 /*HAMBURGER ENDS HERE */
 
 
