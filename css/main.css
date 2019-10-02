@@ -1,6 +1,11 @@
+body{ 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
 .grid-container{
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 150px 1000px auto;
     grid-template-areas:
     "navbar"
     "main-content"
@@ -10,25 +15,260 @@
 .navbar{
     grid-area: navbar;
     display: grid;
+    justify-content: center;
     grid-template-areas: 
     "nav-container";
 }
 .nav-container{
+    max-width: 1100px;
     grid-area: nav-container;
-    display: flex;
-justify-content: space-between;
-align-items: center;
-min-height: 100vh;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 300px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav-logo . home minutes documents involved contact"
 }
+
+.nav-item{
+    list-style: none;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    white-space: nowrap;
+    margin: 8px
+}
+.nav-logo{
+    align-self: center;
+}
+.nav-logo img{
+    width: 100%;
+    display: block;
+}
+
+#home{
+    grid-area: home;
+}
+#minutes{
+    grid-area: minutes;
+    position: relative;
+}
+.expand-menu{
+    position: absolute;
+    background-color: orange;
+    bottom: -100;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    line-height: 24px;
+    display: none;
+}
+
+#minutes:hover .expand-menu{
+   display: block;
+}
+
+
+#documents{
+    grid-area: documents;
+}
+#involved{
+    grid-area: involved;
+}
+#contact{
+    grid-area: contact;
+}
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
+
+.hamburger-menu {
+    color: white;  
+    display: none;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+}
+
+.menu_toggle {
+    border-radius: 3px;
+    display: block;     
+    margin-bottom: 0;
+}
+
+@keyframes myModal {
+    from{opacity: 0}
+    to{opacity:1}
+   
+}
+
+
+#modal{
+    background-color:#00283C;
+    display: none;
+    grid-template-rows: 10% 1fr; 
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:1;
+    width: 80%;
+    height: 100%;
+    animation-name: myModal;
+    animation-duration: .5s;
+
+}   
+
+.modal-children{
+display:grid;
+justify-items: left;
+font-size: 35px;
+grid-row: 2/3;
+grid-template-rows: repeat(5,1fr);
+}
+
+#modal .nav-logo{
+max-width: 250px;
+}
+#modal .nav-logo img{
+    width: 100%;
+}
+
+
+#closeModalBtn{
+    color: magenta;
+    background:#FFFFFF;
+    width:100%;
+}
+ .bar {
+    display: block;
+    margin-right: 20px;
+    width: 25px;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: magenta;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+.openModalBtn{
+    display: block;
+}
+
+#closeModalBtn{
+    justify-self: end;
+}
+.on{
+    grid-column: 3/4;
+    align-self: center;
+}
+.on .one {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.on .two {
+    opacity: 0;
+}
+
+.on .three {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/*HAMBURGER ENDS HERE */
+
+
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
 
 .main-content{
     grid-area: main-content;
 }
 .footer{
     grid-area: footer;
+    background-color: #2A578D;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1100px;
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
-    grid-template-areas:
-    "footer-logo contact-info contact-block";
+    grid-template-areas: "footer-logo contact-info contact-block";
 }
+.footer-wrapper{
+    display: flex;
+justify-content: center;
+background: #2A578D;
+}
+
+.footer-logo{
+    justify-self: center;
+    align-self: center;
+    padding: 15px;
+}
+.footer-contact-info{
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+.contact-block{
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+.footer-logo img{
+    width: 100%;
+    display: block;
+} 
+
+
+@media only screen and (max-width:912px){
+.nav-item{
+    display: none;
+}
+.hamburger-menu {
+    color: magenta;  
+    display: block;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+}
+.navbar{
+    grid-area: navbar;
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: 
+    "nav-container";
+}
+
+.nav-container{
+    max-width: 1100px;
+    grid-area: nav-container;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 250px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav-logo . home minutes documents involved contact"
+}
+}
+@media only screen and (max-width: 667px) {
+    .footer{
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 200px repeat(2,1fr);
+    grid-template-areas: 
+    "footer-logo"
+    "contact-info"
+    "contact-block";
+    }
+
+    .footer-logo img{
+        max-width: 320px;
+        width: 100%;
+        display: block;
+    } 
+  }
