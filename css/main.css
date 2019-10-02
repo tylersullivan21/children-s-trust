@@ -230,6 +230,69 @@ max-width: 250px;
 .mission-para{
     line-height: 2em;
 }
+
+/****************/
+/*MISSION STYLES*/
+/****************/
+
+.icons{
+    grid-area: icons;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    display: grid;
+   background-color: #F8FAFB;
+width: 100%;
+
+    
+}
+.icons ul li{
+    list-style: none;
+}
+.icons-list{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.0rem;
+    max-width: 70rem;
+    grid-template-areas: 
+    "left-list-item center-list-item right-list-item"
+}
+.left-list-item{
+    grid-area: left-list-item;
+    padding-right: 1.8em;
+ 
+}
+
+.center-list-item{
+    grid-area: center-list-item;
+    padding-right: 1.8em;
+ 
+}
+.right-list-item{
+    grid-area: right-list-item;
+    padding-left: 1.8em;
+}
+.icon-heading{
+    font-size: 1.375rem;
+    line-height: 1.25;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.375rem;
+    color: #61B7D4;;
+}
+.icon-description{
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+.icon-img img{
+    border-radius: 400px;
+    
+}
+.icon-img{
+    padding-bottom: 2rem;
+}
 .footer{
     grid-area: footer;
     background-color: #2A578D;
