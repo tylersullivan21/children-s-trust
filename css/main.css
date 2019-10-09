@@ -201,10 +201,9 @@ max-width: 250px;
 .main-content{
     grid-area: main-content;
     display: grid;
-    grid-template-rows: 1fr 200px 1fr 1fr 1fr;
+    grid-template-rows: 1fr  1fr 1fr 1fr;
     grid-template-areas: 
-    "bootstrap-carousel"
-    "tagline"
+    "image-carousel"
     "mission-statement"
     "icons"
     "video-area";
@@ -213,11 +212,16 @@ max-width: 250px;
     grid-area: bootstrap-carousel;
 }
 
+.first-image{
+    max-height: 500px;
+    width: 100%;
+}
+
 /****************/
 /*TAGLINE STYLES*/
 /****************/
 .tagline{
-    grid-area: tagline;
+   height: 150px;
     background: #2A578D;
     color: white;
     display: grid;
