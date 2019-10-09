@@ -201,9 +201,9 @@ max-width: 250px;
 .main-content{
     grid-area: main-content;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 200px 1fr 1fr 1fr;
     grid-template-areas: 
-    "image-carousel"
+    "img-carousel"
     "tagline"
     "mission-statement"
     "icons"
@@ -213,7 +213,7 @@ max-width: 250px;
     grid-area: image-carousel;
 }
 
-.first-image{
+.first-image, .second-image, .third-image{
     
     width: 100%;
 }
@@ -222,11 +222,11 @@ max-width: 250px;
 /*TAGLINE STYLES*/
 /****************/
 .tagline{
-   height: 150px;
     background: #2A578D;
     color: white;
     display: grid;
     grid-area: tagline;
+    height: 150px;
 }
 .tagline-content{
     justify-self: center;
