@@ -201,7 +201,7 @@ max-width: 250px;
 .main-content{
     grid-area: main-content;
     display: grid;
-    grid-template-rows: 1fr 200px 1fr 1fr 1fr;
+    grid-template-rows: auto 200px auto 1fr 1fr;
     grid-template-areas: 
     "img-carousel"
     "tagline"
