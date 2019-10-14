@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Home</title>
 </head>
+
 <body class="grid-container">
 
-    <!-- THIS HERE STARTS CODE FOR NAVBAR-->
-    <nav class="navbar">  
-<ul class="nav-container">
+  <!-- THIS HERE STARTS CODE FOR NAVBAR-->
+  <nav class="navbar">
+    <ul class="nav-container">
 
-<li class="nav-logo"> <a href="index.html"><img src="img/Asset 1.png" alt="Children's Trust Logo"></a></li>
+      <li class="nav-logo"> <a href="index.html"><img src="img/Asset 1.png" alt="Children's Trust Logo"></a></li>
 
-    <li id="home" class="nav-item">Home</li>
+<<<<<<< HEAD
+<li id="home" class="nav-item"><a href="#">Home</a></li>
     <li id="minutes" class="nav-item">Meeting Minutes
+=======
+      <li id="home" class="nav-item"><a href="about.html">Home</a></li>
+      <li id="minutes" class="nav-item">Meeting Minutes
+>>>>>>> dd09c06f13f4a2df072ed932393d944bccdde82c
 
         <ul class="expand-menu">
-            <li id="second-level">Second Level</li>
-            <li id="third-level">Another Header</li>
+          <li id="second-level">Second Level</li>
+          <li id="third-level">Another Header</li>
         </ul>
-
+<<<<<<< HEAD
     </li>
     <li id="documents" class="nav-item">Important Documents</li>
     <li id="involved"class="nav-item">Get Involved</li>
@@ -37,68 +45,149 @@
             <span class="bar two"></span>
             <span class="bar three"></span>
         </a>
+=======
+
+      </li>
+      <li id="documents" class="nav-item">Important Documents</li>
+      <li id="involved" class="nav-item">Get Involved</li>
+      <li id="contact" class="nav-item">Contact</li>
+    </ul>
+
+    <div class="hamburger-menu">
+      <!-- Menu toggle -->
+      <a href="#" class="openModalBtn">
+        <span class="bar one"></span>
+        <span class="bar two"></span>
+        <span class="bar three"></span>
+      </a>
+>>>>>>> dd09c06f13f4a2df072ed932393d944bccdde82c
     </div>
 
-        <!--CODE FOR THE MODAL CLOSE BUTTON START-->
+    <!--CODE FOR THE MODAL CLOSE BUTTON START-->
 
-        <div id="modal">
-                <div id="closeModalBtn">
-                        <div class="nav-logo"> <a href="index.html"><img src="img/Asset 1.png" alt="Children's Trust Logo"></a></div>
-                    <!--
+    <div id="modal">
+      <div id="closeModalBtn">
+        <div class="nav-logo"> <a href="index.html"><img src="img/Asset 1.png" alt="Children's Trust Logo"></a></div>
+        <!--
                    <a class="on" href="#">
                         <span class="bar one"></span>
                         <span class="bar two"></span>
                         <span class="bar three"></span>
                     </a> 
                     -->
-                </div>
-                <ul class="modal-children">
-                    <li class="menu1"><a href="about.html">About</a></li>
-                    <li class="menu2"><a href="resources.html">Explore History</a></li>
-                    <li class="menu3"><a href="reparations.html">Reparations</a></li>
-                    <li class="menu4"><a href="events.html">Events</a></li>
-                    <li class="menu5"><a href="contact.html">Contact</a></li>
-                </ul> 
-        
+      </div>
+      <ul class="modal-children">
+        <li class="menu1"><a href="about.html">Home</a></li>
+        <li class="menu2"><a href="resources.html">Meeting Minutes</a></li>
+        <li class="menu3"><a href="reparations.html">Important Documents</a></li>
+        <li class="menu4"><a href="events.html">Get Involved</a></li>
+        <li class="menu5"><a href="contact.html">Contact</a></li>
+      </ul>
+
+    </div>
+
+    <!--CODE FOR THE MODAL CLOSE BUTTON END-->
+  </nav>
+  <!-- THIS HERE ENDS CODE FOR NAVBAR-->
+
+
+  <!-- THIS HERE STARTS CODE FOR MAIN-CONTENT-->
+  <main class="main-content">
+
+    <!--BOOTSTRAP CAROUSEL BEGINS HERE-->
+
+
+    <div class="image-carousel">
+
+     
+   
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="first-image" class="d-block w-100" src="img/children-crop.png" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/listening-cropped.png" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/grades-cropped.png" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+
+  </div>
+    <!--BOOTSTRAP CAROUSEL ENDS HERE-->
+
+
+
+    <section class="tagline">
+      <div class="tagline-content">
+        <h2 class="tagline-header">Sample heading/ slogan here</h2>
+        <p class="tagline-para">The children trust has been helping alachua county for the past x years in ways such
+          as...</p>
+      </div>
+    </section>
+
+
+    <section class="mission">
+      <div class="mission-content">
+        <h1 class="mission-header">The Children's Trust of Alachua County</h1>
+        <p class="mission-para">Our campaign for children is made up of a grassroots group that is working to bring a
+          Children's Services Council to Alachua County that will be known as the Children's Trust of Alachua County. We
+          believe there is more we can do as a community to see our children succeed and grow in to productive and happy
+          adults.</p>
+        <p class="mission-para">The Children's Trust is a catalyst for positive change and will help deliver better,
+          more comprehensive and more collaborative services to children during their first years of life, and during
+          the times when they are not in school. </p>
+      </div>
+    </section>
+
+    <section class="icons">
+      <ul class="icons-list">
+        <li class="left-list-item">
+          <div class="icon-img"><img src="https://via.placeholder.com/200/09f/fff.png%20C/O%20https://placeholder.com/"
+              alt=""></div>
+          <div class="icon-text">
+            <div class="icon-heading">
+              <h3>35%</h3>
             </div>
-        
-             <!--CODE FOR THE MODAL CLOSE BUTTON END-->
-    </nav>
-    <!-- THIS HERE ENDS CODE FOR NAVBAR-->
-
-
-    <!-- THIS HERE STARTS CODE FOR MAIN-CONTENT-->
-<main class="main-content">
-
-    <!-- THE BOOSTRAP PICTURE CAROUSEL BEGINS HERE-->
-    <div class="bootstrap-carousel" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="https://via.placeholder.com/1228x400.png" alt="First slide">
-              </div>
-
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://via.placeholder.com/1228x400.png" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://via.placeholder.com/1228x400.png" alt="Third slide">
-              </div>
+            <div class="icon-description">
+              <p>The number of our kindergarteners arrive at public school not ready to learn; in many Alachua County
+                schools that number is as high as 56%</p>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
-     <!-- THE BOOSTRAP PICTURE CAROUSELENDS HERE-->
+        </li>
+
+        <li class="center-list-item">
+          <div class="icon-img"><img src="https://via.placeholder.com/200/09f/fff.png%20C/O%20https://placeholder.com/"
+              alt=""></div>
+          <div class="icon-text">
+            <div class="icon-heading">
+              <h3>1,200</h3>
+            </div>
+            <div class="icon-description">
+              <p>The number of public school students in Alachua County were retained/not promoted to the next grade;
+              </p>
+            </div>
+          </div>
+<<<<<<< HEAD
+     <!-- THE BOOSTRAP PICTURE CAROUSEL ENDS HERE-->
 
      <section class="tagline">
        <div class="tagline-content">
@@ -112,7 +201,6 @@
           <h1 class="mission-header">The Children's Trust of Alachua County</h1>
           <p class="mission-para">Our campaign for children is made up of a grassroots group  that is working to bring a Children's Services Council to Alachua County that will be known as the Children's Trust of Alachua County. We believe there is more we can do as a community to see our children succeed and grow in to productive and happy adults.</p>
           <p class="mission-para">The Children's Trust is a catalyst for positive change and will help deliver better, more comprehensive and more collaborative services to children during their first years of life, and during the times when they are not in school.  </p>
-       
         </div>
      </section>
 
@@ -123,55 +211,57 @@
             <div class="icon-text">
                      <div class="icon-heading"><h3>35%</h3></div>
                      <div class="icon-description"> <p>The number of our kindergarteners arrive at public school not ready to learn; in many Alachua County schools that number is as high as 56%</p></div>
+=======
+        </li>
+
+        <li class="right-list-item">
+          <div class="icon-img"><img src="https://via.placeholder.com/200/09f/fff.png%20C/O%20https://placeholder.com/"
+              alt=""></div>
+          <div class="icon-text">
+            <div class="icon-heading">
+              <h3>7$</h3>
             </div>
-            </li>
+            <div class="icon-description">
+              <p>For every $1 invested,at least $7 is saved by the reduced need for spending on other services like
+                remedial education or repeating grades in school.
 
-            <li class="center-list-item">
-                    <div class="icon-img"><img src="https://via.placeholder.com/200/09f/fff.png%20C/O%20https://placeholder.com/" alt=""></div>
-               <div class="icon-text">
-                        <div class="icon-heading"><h3>1,200</h3></div>
-                        <div class="icon-description"> <p>The number of public school students in Alachua County were retained/not promoted to the next grade;</p></div>
-               </div>
-               </li>
-
-               <li class="right-list-item">
-                    <div class="icon-img"><img src="https://via.placeholder.com/200/09f/fff.png%20C/O%20https://placeholder.com/" alt=""></div>
-               <div class="icon-text">
-                        <div class="icon-heading"><h3>7$</h3></div>
-                        <div class="icon-description"><p>For every $1 invested,at least $7 is saved by the reduced need for spending on other services like remedial education or repeating grades in school.
-
-                          </p></div>
-               </div>
-               </li>
-        </ul>
+              </p>
+>>>>>>> dd09c06f13f4a2df072ed932393d944bccdde82c
+            </div>
+          </div>
+        </li>
+      </ul>
     </section>
-    
-</main>
-<!-- THIS HERE ENDS CODE FOR MAIN-CONTENT-->
 
-<div class="footer-wrapper">
+  </main>
+  <!-- THIS HERE ENDS CODE FOR MAIN-CONTENT-->
+
+  <div class="footer-wrapper">
     <footer class="footer">
-    <div class="footer-logo">
+      <div class="footer-logo">
         <a href="index.html"><img src="img/Asset 3.png" alt=""></a>
-    </div>
+      </div>
 
-    <div class="footer-contact-info">
+      <div class="footer-contact-info">
         <p>9754 Example Lane 32300</p>
         <p>example@gmail.com</p>
         <p>111-222-3334</p>
-    </div>
+      </div>
 
-    <div class="contact-block">
+      <div class="contact-block">
         <label for="name">Name:</label>
         <input type="text" placeholder="Name">
-    </div>
+      </div>
 
     </footer>
-    </div>
+  </div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+
 </html>

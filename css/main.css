@@ -190,7 +190,9 @@ max-width: 250px;
 
 /*HAMBURGER ENDS HERE */
 
-
+li a{
+    display: block;
+}
 
 
 /***********************************/
@@ -201,26 +203,32 @@ max-width: 250px;
 .main-content{
     grid-area: main-content;
     display: grid;
-    grid-template-rows: 1fr 200px 1fr 1fr 1fr;
+    grid-template-rows: auto 200px auto 1fr 1fr;
     grid-template-areas: 
-    "bootstrap-carousel"
+    "img-carousel"
     "tagline"
     "mission-statement"
     "icons"
     "video-area";
 }
 .bootstrap-carousel{
-    grid-area: bootstrap-carousel;
+    grid-area: image-carousel;
+}
+
+.first-image, .second-image, .third-image{
+    
+    width: 100%;
 }
 
 /****************/
 /*TAGLINE STYLES*/
 /****************/
 .tagline{
-    grid-area: tagline;
     background: #2A578D;
     color: white;
     display: grid;
+    grid-area: tagline;
+    height: 150px;
 }
 .tagline-content{
     justify-self: center;
