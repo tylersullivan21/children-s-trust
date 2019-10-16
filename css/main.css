@@ -1,3 +1,6 @@
+
+/* styles without an auto
+
 body{ 
     margin: 0; 
     padding: 0; 
@@ -94,9 +97,9 @@ body{
 
 
 /***********************************/
-/* STYLES FOR HAMBURGER MENU */
+   /* STYLES FOR HAMBURGER MENU */
 /***********************************/
-
+/*
 
 .hamburger-menu {
     color: white;  
@@ -196,7 +199,7 @@ max-width: 250px;
 /***********************************/
 /* STYLES FOR HAMBURGER MENU */
 /***********************************/
-
+/*
 
 .main-content{
     grid-area: main-content;
@@ -221,6 +224,7 @@ max-width: 250px;
 /****************/
 /*TAGLINE STYLES*/
 /****************/
+/*
 .tagline{
     background: #2A578D;
     color: white;
@@ -238,7 +242,7 @@ max-width: 250px;
 /****************/
 /*MISSION STYLES*/
 /****************/
-
+/*
 .mission{
     padding: 0 20%;
     margin: 5% 0;
@@ -254,7 +258,7 @@ max-width: 250px;
 /****************/
 /*MISSION STYLES*/
 /****************/
-
+/*
 .icons{
     grid-area: icons;
     padding-top: 7rem;
@@ -387,6 +391,561 @@ background: #2A578D;
     grid-gap: 10px;
     grid-template-rows: 200px repeat(2,1fr);
     grid-template-areas: 
+    "footer-logo"
+    "contact-info"
+    "contact-block";
+    }
+
+    .footer-logo img{
+        max-width: 320px;
+        width: 100%;
+        display: block;
+    } 
+  }
+
+  */
+
+
+  body{ 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+   }
+   *:before,
+   *:after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+   }
+   html,
+   body {
+    height: 100%;
+    position: relative;
+   }
+   .mai
+
+.grid-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 150px 1000px auto;
+    grid-template-rows: 150px 1000px auto;
+        grid-template-areas:
+    "navbar"
+    "main-content"
+    "footer";
+}
+
+.navbar{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: navbar;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        grid-template-areas: 
+    "nav-container";
+}
+.nav-container{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    max-width: 1100px;
+    grid-area: nav-container;
+    list-style: none;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 300px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 300px 2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "nav-logo . home minutes documents involved contact"
+}
+
+.nav-item{
+    list-style: none;
+    padding: 5px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    white-space: nowrap;
+    margin: 8px
+}
+.nav-logo{
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+}
+.nav-logo img{
+    width: 100%;
+    display: block;
+}
+
+#home{
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: home;
+}
+#minutes{
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: minutes;
+    position: relative;
+}
+.expand-menu{
+    position: absolute;
+    background-color: orange;
+    bottom: -100;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    line-height: 24px;
+    display: none;
+}
+
+#minutes:hover .expand-menu{
+   display: block;
+}
+
+
+#documents{
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: documents;
+}
+#involved{
+    -ms-grid-row: 1;
+    -ms-grid-column: 6;
+    grid-area: involved;
+}
+#contact{
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+    grid-area: contact;
+}
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
+
+.hamburger-menu {
+    color: white;  
+    display: none;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-grid-row-align: center;
+        align-self: center;
+}
+
+.menu_toggle {
+    border-radius: 3px;
+    display: block;     
+    margin-bottom: 0;
+}
+
+@-webkit-keyframes myModal {
+    from{opacity: 0}
+    to{opacity:1}
+   
+}
+
+@keyframes myModal {
+    from{opacity: 0}
+    to{opacity:1}
+   
+}
+
+
+#modal{
+    background-color:#00283C;
+    display: none;
+    -ms-grid-rows: 10% 1fr;
+    grid-template-rows: 10% 1fr; 
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:1;
+    width: 80%;
+    height: 100%;
+    -webkit-animation-name: myModal;
+            animation-name: myModal;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+
+}   
+
+.modal-children{
+display:-ms-grid;
+display:grid;
+justify-items: left;
+font-size: 35px;
+-ms-grid-row: 2;
+-ms-grid-row-span: 1;
+grid-row: 2/3;
+-ms-grid-rows: (1fr)[5];
+grid-template-rows: repeat(5,1fr);
+}
+
+#modal .nav-logo{
+max-width: 250px;
+}
+#modal .nav-logo img{
+    width: 100%;
+}
+
+
+#closeModalBtn{
+    color: magenta;
+    background:#FFFFFF;
+    width:100%;
+}
+ .bar {
+    display: block;
+    margin-right: 20px;
+    width: 25px;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: magenta;
+    border-radius: 1px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.openModalBtn{
+    display: block;
+}
+
+#closeModalBtn{
+    -ms-grid-column-align: end;
+        justify-self: end;
+}
+.on{
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row-align: center;
+        align-self: center;
+}
+.on .one {
+    -webkit-transform: rotate(45deg) translate(6px, 6px);
+        -ms-transform: rotate(45deg) translate(6px, 6px);
+            transform: rotate(45deg) translate(6px, 6px);
+}
+
+.on .two {
+    opacity: 0;
+}
+
+.on .three {
+    -webkit-transform: rotate(-45deg) translate(6px, -6px);
+        -ms-transform: rotate(-45deg) translate(6px, -6px);
+            transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/*HAMBURGER ENDS HERE */
+
+
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
+
+.main-content{
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: main-content;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 200px auto 1fr 1fr;
+    grid-template-rows: auto 200px auto 1fr 1fr;
+        grid-template-areas: 
+    "img-carousel"
+    "tagline"
+    "mission-statement"
+    "icons"
+    "video-area";
+}
+.bootstrap-carousel{
+    grid-area: image-carousel;
+}
+
+.first-image, .second-image, .third-image{
+    
+    width: 100%;
+}
+
+/****************/
+/*TAGLINE STYLES*/
+/****************/
+.tagline{
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    background: #2A578D;
+    color: white;
+    display: -ms-grid;
+    display: grid;
+    grid-area: tagline;
+    height: 150px;
+}
+.tagline-content{
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+}
+.tagline-header{
+    text-align: center;
+}
+/****************/
+/*MISSION STYLES*/
+/****************/
+
+.mission{
+    padding: 0 20%;
+    margin: 5% 0;
+}
+.mission-header{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.mission-para{
+    line-height: 2em;
+}
+
+/****************/
+/*MISSION STYLES*/
+/****************/
+
+.icons{
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: icons;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    display: -ms-grid;
+    display: grid;
+   background-color: #F8FAFB;
+width: 100%;
+
+    
+}
+.icons ul li{
+    list-style: none;
+}
+.icons-list{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.0rem;
+    max-width: 70rem;
+        grid-template-areas: 
+    "left-list-item center-list-item right-list-item"
+}
+.left-list-item{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left-list-item;
+    padding-right: 1.8em;
+ 
+}
+
+.center-list-item{
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: center-list-item;
+    padding-right: 1.8em;
+ 
+}
+.right-list-item{
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: right-list-item;
+    padding-left: 1.8em;
+}
+.icon-heading{
+    font-size: 1.375rem;
+    line-height: 1.25;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.375rem;
+    color: #61B7D4;;
+}
+.icon-description{
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+.icon-img img{
+    border-radius: 400px;
+    
+}
+.icon-img{
+    padding-bottom: 2rem;
+}
+.footer{
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    background-color: #2A578D;
+    display: -ms-grid;
+    display: grid;
+    max-width: 1100px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+        grid-template-areas: "footer-logo contact-info contact-block";
+}
+.footer-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+background: #2A578D;
+}
+
+.footer-logo{
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 15px;
+}
+.footer-contact-info{
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: white;
+}
+.contact-block{
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: white;
+}
+.footer-logo img{
+    width: 100%;
+    display: block;
+} 
+
+
+@media only screen and (max-width:912px){
+.nav-item{
+    display: none;
+}
+.hamburger-menu {
+    color: magenta;  
+    display: block;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-grid-row-align: center;
+        align-self: center;
+}
+.navbar{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: navbar;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        grid-template-areas: 
+    "nav-container";
+}
+
+.nav-container{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    max-width: 1100px;
+    grid-area: nav-container;
+    list-style: none;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 250px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 250px 2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "nav-logo . home minutes documents involved contact"
+}
+
+@media only screen and (max-width:912px){
+.nav-container{ 
+            -ms-grid-row: 1; 
+            -ms-grid-column: 1;
+} 
+    }
+.nav-container{ 
+        -ms-grid-row: 1; 
+        -ms-grid-column: 1;
+}
+
+#home{ 
+        -ms-grid-row: 1; 
+        -ms-grid-column: 3
+}
+
+#minutes{ 
+        -ms-grid-row: 1; 
+        -ms-grid-column: 4
+}
+
+#documents{ 
+        -ms-grid-row: 1; 
+        -ms-grid-column: 5
+}
+
+#involved{ 
+        -ms-grid-row: 1; 
+        -ms-grid-column: 6
+}
+
+#contact{ 
+        -ms-grid-row: 1; 
+        -ms-grid-column: 7
+}
+}
+@media only screen and (max-width: 667px) {
+    .footer{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    -ms-grid-rows: 200px 10px 1fr 10px 1fr;
+    grid-template-rows: 200px repeat(2,1fr);
+        grid-template-areas: 
     "footer-logo"
     "contact-info"
     "contact-block";
