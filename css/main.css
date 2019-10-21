@@ -1,3 +1,5 @@
+
+
 body{ 
     margin: 0; 
     padding: 0; 
@@ -264,9 +266,9 @@ li a{
     display: grid;
    background-color: #F8FAFB;
 width: 100%;
-
     
 }
+
 .icons ul li{
     list-style: none;
 }
@@ -305,12 +307,12 @@ width: 100%;
     color: #61B7D4;;
 }
 .icon-description{
-    font-size: 1.125rem;
+    font-size: 16px;
     line-height: 1.65;
 }
 .icon-img img{
     border-radius: 400px;
-    
+    max-width: 120px;
 }
 .icon-img{
     padding-bottom: 2rem;
@@ -400,3 +402,5 @@ background: #2A578D;
         display: block;
     } 
   }
+
+  */
