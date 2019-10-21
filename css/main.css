@@ -384,6 +384,19 @@ background: #2A578D;
 }
 }
 @media only screen and (max-width: 667px) {
+   
+   .nav-container{
+    padding: 0;
+    margin: 0;
+    grid-area: nav-container;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas: "nav-logo hamburger-menu"
+   }
+   .tagline-content{
+       height: 100px;
+   }
     .tagline-header{
         text-align: center;
         font-size: 1.5rem;
@@ -394,8 +407,11 @@ background: #2A578D;
         padding: 0 3%;
     }
 .mission{
-    padding: 0 8%;
+    padding: 0 5%;
     margin: 5% 0;
+}
+.mission-header{
+    font-size: 26px;
 }
 .mission-para{
     text-align: center;
