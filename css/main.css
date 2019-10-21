@@ -343,16 +343,29 @@ background: #2A578D;
     justify-self: center;
     align-self: center;
     color: white;
+    display:grid;
 }
+.footer-contact-info p{
+    justify-self: center;
+}
+
 .contact-block{
     justify-self: center;
     align-self: center;
     color: white;
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: "facebook twitter instagram snapchat";
+grid-gap: 25px;
 }
 .footer-logo img{
     width: 100%;
     display: block;
 } 
+
+.facebook, .twitter, .instagram, .snapchat{
+    font-size: 32px;
+}
 
 
 @media only screen and (max-width:912px){
@@ -431,6 +444,22 @@ background: #2A578D;
     "center-list-item"
     "right-list-item";
 }
+.left-list-item{
+    grid-area: left-list-item;
+    padding: 0;
+ 
+}
+
+.center-list-item{
+    grid-area: center-list-item;
+    padding: 0;
+ 
+}
+.right-list-item{
+    grid-area: right-list-item;
+    padding: 0;
+}
+
     .footer{
     justify-content: center;
     align-self: center;
@@ -448,6 +477,11 @@ background: #2A578D;
         width: 100%;
         display: block;
     } 
+
+.facebook, .twitter, .instagram, .snapchat{
+    font-size: 25px;
+}
+
   }
 
   
