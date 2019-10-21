@@ -52,6 +52,9 @@ body{
     white-space: nowrap;
     margin: 8px
 }
+.nav-item a{
+    color: black;
+}
 .nav-logo{
     align-self: center;
 }
@@ -244,7 +247,7 @@ li a{
 /****************/
 
 .mission{
-    max-width: 1100px;
+    max-width: 1000px;
     justify-self: center;
     margin: 5% 0;
 }
@@ -328,7 +331,7 @@ width: 100%;
     display: grid;
     align-self: center;
     justify-self: center;
-    max-width: 1100px;
+    max-width: 1050px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "video video-text";
@@ -338,6 +341,7 @@ width: 100%;
 }
 .video-text{
     grid-area: video-text;
+    padding-left: 5%;
 }
 
 .footer{
@@ -443,7 +447,7 @@ grid-gap: 25px;
         padding: 0 3%;
     }
 .mission{
-    padding: 0 5%;
+   
     margin: 5% 0;
 }
 .mission-header{
