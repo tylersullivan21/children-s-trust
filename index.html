@@ -190,11 +190,45 @@
               </div>
             </div>
             </li>
-
+</section>
      <!-- THE BOOSTRAP PICTURE CAROUSEL ENDS HERE-->
 
 
     <section class="video-section">
+
+      <div class="video">
+        <video id='video' controls="controls" preload='none'
+        width="500" poster="img/AdobeStock_169534358_Preview.jpeg">
+        <source id='mp4' src="https://www.youtube.com/watch?v=6MM1mk9m1yA" type='video/mp4'/>
+        <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'/>
+        <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'/>
+        <!--
+          Track to be used for accessibility using the VTT standard. 
+
+          See https://www.html5rocks.com/en/tutorials/track/basics/ for more information on how to use text tracks
+        -->
+        <track kind="subtitles" label="English subtitles" src="subtitles_en.vtt" srclang="en" default></track>
+        <!-- 
+        We can also add more than one text track and let the user choose which one to play. There is now way to 
+        currently do this with the built in controls so it'll have to be scripted --> 
+        <track kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt" srclang="de"></track>
+
+        <!-- 
+          We're not using Flash as a fallback option. It should be coverage enough to 
+        -->
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+      </div>
+
+      <div class="video-text">
+
+          <h3 style="text-align: center;margin-bottom: .8em;" >The story behind the Children's Trust</h3>
+          <p>Watch this video to get a backstory on what the Children's Trust is and why it is so important for our Children and our Community.</p>
+          <p>This video should give you an idea on why the Children's Trust is so important to the children in the community.</p>
+          <p>Take a look at this video for an outlook on what it is that the Children's Trust does and why it is so important.</p>
+          <p>View this video to see what impact the Children's Trust has on our children and community.</p>
+      </div>
+
 
     </section>
 
