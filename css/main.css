@@ -459,6 +459,7 @@ grid-gap: 25px;
 }
 #video{
     justify-self: center;
+    width: 100%!important;
 }
 .video-section {
     display: grid;
