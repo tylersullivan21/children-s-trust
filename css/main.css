@@ -423,6 +423,33 @@ grid-gap: 25px;
     grid-template-areas: "nav-logo . home minutes documents involved contact"
 }
 }
+/************************************/
+/****TABLET BREAKPOINT HERE!*/
+/************************************/
+@media only screen and (max-width: 768px){
+.mission{
+    max-width: 650px;
+}
+.video{
+    display: grid;
+
+}
+#video{
+    justify-self: center;
+}
+.video-section {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    /* max-width: 1050px; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "video"
+        "video-text";
+}
+}
+
 @media only screen and (max-width: 667px) {
    
    .nav-container{
@@ -455,6 +482,18 @@ grid-gap: 25px;
 }
 .mission-para{
     text-align: center;
+}
+
+.video-section {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    max-width: 1050px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "video"
+        "video-text";
 }
 
 .icons-list{
