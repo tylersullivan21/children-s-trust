@@ -219,6 +219,9 @@ li a{
 .bootstrap-carousel{
     grid-area: image-carousel;
 }
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: black;
+}
 
 .first-image, .second-image, .third-image{
     
