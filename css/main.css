@@ -430,6 +430,29 @@ grid-gap: 25px;
 .mission{
     max-width: 650px;
 }
+.icons{
+    padding: 0;
+}
+.icons-list{
+    display: grid;
+    padding: 0;
+    margin: 20px; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.0rem;
+    max-width: 450px;
+    grid-template-areas:
+        "left-list-item"
+        "center-list-item"
+        "right-list-item";
+  
+}
+.left-list-item, .center-list-item, .right-list-item{
+    padding: 8% 0;
+}
 .video{
     display: grid;
 
@@ -447,6 +470,10 @@ grid-gap: 25px;
     grid-template-areas:
         "video"
         "video-text";
+}
+.video-text{
+    text-align: center;
+    padding: 0;
 }
 }
 
