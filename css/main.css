@@ -424,6 +424,15 @@ grid-gap: 25px;
 }
 }
 /************************************/
+/****LARGE TABLET BREAKPOINT HERE!*/
+/************************************/
+@media only screen and (max-width: 1024px){
+.mission{
+    max-width: 840px;
+}
+}
+
+/************************************/
 /****TABLET BREAKPOINT HERE!*/
 /************************************/
 @media only screen and (max-width: 768px){
