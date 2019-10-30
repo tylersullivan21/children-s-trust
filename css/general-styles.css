@@ -1,0 +1,268 @@
+/******************************************************/
+/* THIS FILE CONTAINS GLOBAL STYLES FOR NAV AND FOOTER*/
+/******************************************************/
+
+
+body{ 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+* {
+    box-sizing: border-box;
+   }
+   *:before,
+   *:after {
+    box-sizing: border-box;
+   }
+   html,
+   body {
+    height: 100%;
+    position: relative;
+   }
+   
+   .grid-container{
+    display: grid;
+    grid-template-rows: 150px 1000px auto;
+    grid-template-areas:
+    "navbar"
+    "main-content"
+    "footer";
+}
+/******************/
+/* CODE FOR NAVBAR*/
+/******************/
+
+.navbar{
+    grid-area: navbar;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "nav-container";
+}
+.nav-container{
+    max-width: 1100px;
+    grid-area: nav-container;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 300px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav-logo . home minutes documents involved contact"
+}
+
+.nav-item{
+    list-style: none;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    white-space: nowrap;
+    margin: 8px
+}
+.nav-item a{
+    color: black;
+}
+.nav-logo{
+    align-self: center;
+}
+.nav-logo img{
+    width: 100%;
+    display: block;
+}
+
+
+#home{
+    grid-area: home;
+}
+#minutes{
+    grid-area: minutes;
+    position: relative;
+}
+.expand-menu{
+    position: absolute;
+    background-color: orange;
+    bottom: -100;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    line-height: 24px;
+    display: none;
+}
+
+#minutes:hover .expand-menu{
+   display: block;
+}
+
+
+#documents{
+    grid-area: documents;
+}
+#involved{
+    grid-area: involved;
+}
+#contact{
+    grid-area: contact;
+}
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
+
+.hamburger-menu {
+    color: white;  
+    display: none;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+}
+
+.menu_toggle {
+    border-radius: 3px;
+    display: block;     
+    margin-bottom: 0;
+}
+
+@keyframes myModal {
+    from{opacity: 0}
+    to{opacity:1}
+   
+}
+
+
+#modal{
+    background-color:#00283C;
+    display: none;
+    grid-template-rows: 10% 1fr; 
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:1;
+    width: 80%;
+    height: 100%;
+    animation-name: myModal;
+    animation-duration: .5s;
+
+}   
+
+.modal-children{
+display:grid;
+justify-items: left;
+font-size: 35px;
+grid-row: 2/3;
+grid-template-rows: repeat(5,1fr);
+}
+
+#modal .nav-logo{
+max-width: 250px;
+}
+#modal .nav-logo img{
+    width: 100%;
+}
+
+
+#closeModalBtn{
+    color: #2A578D;
+    background:#FFFFFF;
+    width:100%;
+}
+ .bar {
+    display: block;
+    margin-right: 20px;
+    width: 25px;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: #2A578D;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+.openModalBtn{
+    display: block;
+}
+
+#closeModalBtn{
+    justify-self: end;
+}
+.on{
+    grid-column: 3/4;
+    align-self: center;
+}
+.on .one {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.on .two {
+    opacity: 0;
+}
+
+.on .three {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/*HAMBURGER ENDS HERE */
+
+li a{
+    display: block;
+}
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
+
+
+
+/***********************************/
+/* STYLES FOR FOOTER */
+/***********************************/
+
+.footer{
+    grid-area: footer;
+    background-color: #2A578D;
+    display: grid;
+    max-width: 1100px;
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: "footer-logo contact-info contact-block";
+}
+.footer-wrapper{
+    display: flex;
+justify-content: center;
+background: #2A578D;
+}
+
+.footer-logo{
+    justify-self: center;
+    align-self: center;
+    padding: 15px;
+}
+.footer-contact-info{
+    justify-self: center;
+    align-self: center;
+    color: white;
+    display:grid;
+}
+.footer-contact-info p{
+    justify-self: center;
+}
+
+.contact-block{
+    justify-self: center;
+    align-self: center;
+    color: white;
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: "facebook twitter instagram snapchat";
+grid-gap: 25px;
+}
+.footer-logo img{
+    width: 100%;
+    display: block;
+} 
+
+.facebook, .twitter, .instagram, .snapchat{
+    font-size: 32px;
+}
