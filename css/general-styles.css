@@ -217,7 +217,7 @@ li a{
 /* STYLES FOR FOOTER */
 /***********************************/
 
-.footer{
+/*.footer{
     grid-area: footer;
     background-color: #2A578D;
     display: grid;
