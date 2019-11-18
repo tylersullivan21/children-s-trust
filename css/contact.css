@@ -1,0 +1,474 @@
+
+body{ 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+* {
+    box-sizing: border-box;
+   }
+   *:before,
+   *:after {
+    box-sizing: border-box;
+   }
+   html,
+   body {
+    height: 100%;
+    position: relative;
+   }
+
+.grid-container{
+    display: grid;
+    grid-template-rows: 150px 1000px auto;
+    grid-template-areas:
+    "navbar"
+    "main-content"
+    "footer";
+}
+
+.navbar{
+    grid-area: navbar;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "nav-container";
+}
+.nav-container{
+    max-width: 1100px;
+    grid-area: nav-container;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 300px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav-logo . home minutes documents involved contact"
+}
+
+.nav-item{
+    list-style: none;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    white-space: nowrap;
+    margin: 8px
+}
+.nav-item a{
+    color: black;
+}
+.nav-logo{
+    align-self: center;
+}
+.nav-logo img{
+    width: 100%;
+    display: block;
+}
+
+#home{
+    grid-area: home;
+}
+#minutes{
+    grid-area: minutes;
+    position: relative;
+}
+.expand-menu{
+    position: absolute;
+    background-color: orange;
+    bottom: -100;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    line-height: 24px;
+    display: none;
+}
+
+#minutes:hover .expand-menu{
+   display: block;
+}
+
+
+#documents{
+    grid-area: documents;
+}
+#involved{
+    grid-area: involved;
+}
+#contact{
+    grid-area: contact;
+}
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
+
+.hamburger-menu {
+    color: white;  
+    display: none;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+}
+
+.menu_toggle {
+    border-radius: 3px;
+    display: block;     
+    margin-bottom: 0;
+}
+
+@keyframes myModal {
+    from{opacity: 0}
+    to{opacity:1}
+   
+}
+
+
+#modal{
+    background-color:#00283C;
+    display: none;
+    grid-template-rows: 10% 1fr; 
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:1;
+    width: 80%;
+    height: 100%;
+    animation-name: myModal;
+    animation-duration: .5s;
+
+}   
+
+.modal-children{
+display:grid;
+justify-items: left;
+font-size: 35px;
+grid-row: 2/3;
+grid-template-rows: repeat(5,1fr);
+}
+
+#modal .nav-logo{
+max-width: 250px;
+}
+#modal .nav-logo img{
+    width: 100%;
+}
+
+
+#closeModalBtn{
+    color: #2A578D;
+    background:#FFFFFF;
+    width:100%;
+}
+ .bar {
+    display: block;
+    margin-right: 20px;
+    width: 25px;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: #2A578D;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+.openModalBtn{
+    display: block;
+}
+
+#closeModalBtn{
+    justify-self: end;
+}
+.on{
+    grid-column: 3/4;
+    align-self: center;
+}
+.on .one {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.on .two {
+    opacity: 0;
+}
+
+.on .three {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/*HAMBURGER ENDS HERE */
+
+li a{
+    display: block;
+}
+
+
+/***********************************/
+/* STYLES FOR HAMBURGER MENU */
+/***********************************/
+
+
+.main-content{
+    grid-area: main-content;
+    display: grid;
+    grid-template-rows: auto 200px auto 1fr 1fr;
+    grid-template-areas: 
+    "cover-img"
+    "form-section"
+}
+
+.cover-img{
+    grid-area: cover-img;
+}
+.cover-img img{
+    width: 100%;
+}
+
+.form-section{
+    grid-area: form-section;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-areas:
+    "contact-form info";
+}
+
+
+
+
+.footer{
+    grid-area: footer;
+    background-color: #2A578D;
+    display: grid;
+    max-width: 1100px;
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: "footer-logo contact-info contact-block";
+}
+.footer-wrapper{
+    display: flex;
+justify-content: center;
+background: #2A578D;
+}
+
+.footer-logo{
+    justify-self: center;
+    align-self: center;
+    padding: 15px;
+}
+.footer-contact-info{
+    justify-self: center;
+    align-self: center;
+    color: white;
+    display:grid;
+}
+.footer-contact-info p{
+    justify-self: center;
+}
+
+.contact-block{
+    justify-self: center;
+    align-self: center;
+    color: white;
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: "facebook twitter instagram snapchat";
+grid-gap: 25px;
+}
+.footer-logo img{
+    width: 100%;
+    display: block;
+} 
+
+.facebook, .twitter, .instagram, .snapchat{
+    font-size: 32px;
+}
+
+
+@media only screen and (max-width:912px){
+.nav-item{
+    display: none;
+}
+.hamburger-menu {
+    color: #2A578D;  
+    display: block;
+    grid-column: 2/3;
+    justify-self: end;
+    align-self: center;
+}
+.navbar{
+    grid-area: navbar;
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: 
+    "nav-container";
+}
+
+.nav-container{
+    max-width: 1100px;
+    grid-area: nav-container;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 250px 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav-logo . home minutes documents involved contact"
+}
+}
+/************************************/
+/****LARGE TABLET BREAKPOINT HERE!*/
+/************************************/
+@media only screen and (max-width: 1024px){
+.mission{
+    max-width: 840px;
+}
+}
+
+/************************************/
+/****TABLET BREAKPOINT HERE!*/
+/************************************/
+@media only screen and (max-width: 768px){
+.mission{
+    max-width: 650px;
+}
+.icons{
+    padding: 0;
+}
+.icons-list{
+    display: grid;
+    padding: 0;
+    margin: 20px; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.0rem;
+    max-width: 450px;
+    grid-template-areas:
+        "left-list-item"
+        "center-list-item"
+        "right-list-item";
+  
+}
+.left-list-item, .center-list-item, .right-list-item{
+    padding: 8% 0;
+}
+.video{
+    display: grid;
+
+}
+#video{
+    justify-self: center;
+    width: 100%!important;
+}
+.video-section {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    /* max-width: 1050px; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "video"
+        "video-text";
+}
+.video-text{
+    text-align: center;
+    padding: 0;
+}
+}
+
+@media only screen and (max-width: 667px) {
+   
+   .nav-container{
+    padding: 0;
+    margin: 0;
+    grid-area: nav-container;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas: "nav-logo hamburger-menu"
+   }
+   .tagline-content{
+       height: 100px;
+   }
+    .tagline-header{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 3%;
+    }
+    .tagline-para{
+        text-align: center;
+        padding: 0 3%;
+    }
+.mission{
+   
+    margin: 5% 0;
+}
+.mission-header{
+    font-size: 26px;
+}
+.mission-para{
+    text-align: center;
+}
+
+.video-section {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    max-width: 1050px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "video"
+        "video-text";
+}
+
+.icons-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,auto);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.0rem;
+    max-width: 70rem;
+    grid-template-areas: 
+    "left-list-item"
+    "center-list-item"
+    "right-list-item";
+}
+.left-list-item{
+    grid-area: left-list-item;
+    padding: 0;
+ 
+}
+
+.center-list-item{
+    grid-area: center-list-item;
+    padding: 0;
+ 
+}
+.right-list-item{
+    grid-area: right-list-item;
+    padding: 0;
+}
+
+    .footer{
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 200px repeat(2,1fr);
+    grid-template-areas: 
+    "footer-logo"
+    "contact-info"
+    "contact-block";
+    }
+
+    .footer-logo img{
+        max-width: 320px;
+        width: 100%;
+        display: block;
+    } 
+
+.facebook, .twitter, .instagram, .snapchat{
+    font-size: 25px;
+}
+
+  }
